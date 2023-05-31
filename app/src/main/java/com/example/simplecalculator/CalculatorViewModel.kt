@@ -38,7 +38,7 @@ class CalculatorViewModel:ViewModel(){
         val number2 = state.number2.toDoubleOrNull()
         if (number1 != null && number2 !=null)
         {
-            val result = when(state.operation){
+            @Suppress("IMPLICIT_CAST_TO_ANY") val result = when(state.operation){
                 is CalculatorOperation.Add -> number1 + number2
                 is CalculatorOperation.Subtract -> number1 - number2
                 is CalculatorOperation.Multiply -> number1 * number2
